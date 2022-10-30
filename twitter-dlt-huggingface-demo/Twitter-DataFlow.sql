@@ -37,8 +37,8 @@ AS SELECT * FROM cloud_files(
 
 create or replace streaming  live table silver 
 
-(constraint valid_language expect (lang == "en") on violation drop row,
-constraint valid_id expect (id != "") on violation drop row)
+-- (constraint valid_language expect (lang == "en") on violation drop row,
+-- constraint valid_id expect (id != "") on violation drop row)
 
 comment 'data is cleansed - other languages than EN are dropped'
 
